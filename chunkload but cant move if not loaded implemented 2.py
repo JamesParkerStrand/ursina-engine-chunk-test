@@ -26,7 +26,7 @@ class Chunk():
     def makeBlockInActive(self):
         if self.activelength > 0:
             destroy(self.activeBlocks[self.activelength - 1])
-            del self.activeBlocks[self.activelength - 1]
+            self.activeBlocks.pop()
             self.activelength -= 1
 
 app = Ursina()
